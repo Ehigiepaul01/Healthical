@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: hsl(240, 100%, 27.3%);
+  --white: hsl(0, 0%, 100%);
+  --lightblue: hsl(195, 48%, 82%);
+  --blue: hsl(240, 96%, 46%);
+  --gray: hsl(0, 0%, 50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar styling */
+nav {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.home {
+  border-bottom: 4px solid var(--blue);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.menu a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 1.5rem;
+  color: var(--blue);
+}
+
+.sign-up {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--blue);
+  background: var(--white);
+  color: var(--blue);
+  margin-right: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.log-in {
+  padding: 0.5rem 2rem;
+  background: var(--darkblue);
+  color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Hero Section Styling */
+.hero {
+  background-image: url(./images/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+}
+
+.details {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.details h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.details p {
+  width: 900px;
+  padding-left: 18rem;
+  text-align: center;
+  justify-content: center;
+}
+
+span {
+  color: var(--blue);
+}
+
+button {
+  background: var(--darkblue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+/* End of Hero Section Styling */
+
+/* About Section Styling */
+
+.about-us {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-us h2 {
+  color: var(--blue);
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+h2 span {
+  border-bottom: 2px solid var(--blue);
+}
+
+.people {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual,
+.families,
+.hospitals {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  margin-top: 3rem;
+}
+
+.container {
+  border: 1px solid var(--lightblue);
+  color: var(--darkblue);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.container h3 {
+  padding-bottom: 1rem;
+}
+
+/* Testimonial Section Styling */
+
+.testimonials {
+  background: var(--darkblue);
+  padding-bottom: 2rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  justify-content: center;
+  color: var(--lightblue);
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.test-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.testimonial1,
+.testimonial2,
+.testimonial3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review {
+  color: var(--lightblue);
+  text-align: center;
+  margin-right: 3rem;
+  line-height: 1.5rem;
+}
+
+/* FAQ Section Styling */
+.faq {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.faq h2 {
+  text-align: center;
+  justify-content: center;
+  color: var(--blue);
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.faq span {
+  border-bottom: 2px solid var(--blue);
+}
+
+.accordion {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  margin-left: 12rem;
+}
+
+.row1,
+.row2,
+.row3,
+.row4 {
+  display: flex;
+  flex-direction: row;
+  /* padding-right: 2rem; */
+}
+
+.question1,
+.question2,
+.question3,
+.question4 {
+  box-sizing: content-box;
+  position: relative;
+  background: var(--lightblue);
+  color: var(--darkblue);
+  border-radius: 0.5rem;
+  padding: 1rem 1rem;
+  max-width: 35%;
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+}
+
+.question5,
+.question6,
+.question7,
+.question8 {
+  box-sizing: content-box;
+  position: relative;
+  background: var(--lightblue);
+  color: var(--darkblue);
+  border-radius: 0.5rem;
+  padding: 1rem 1rem;
+  max-width: 35%;
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+}
+
+.head {
+  position: relative;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+.head h3 {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.response {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-top: 0.6rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+/* Footer Section Styling */
+.footer-area {
+  background: var(--darkblue);
+  padding-top: 1rem;
+  padding-left: 12rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+
+.company,
+.legal,
+.resources,
+.contact {
+  padding-right: 6rem;
+}
+
+.company h4,
+.resources h4,
+.legal h4,
+.contact h4 {
+  display: flex;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.company-details p,
+.legal-details p,
+.resources-details p {
+  display: flex;
+  padding-bottom: 0.5rem;
+  color: var(--lightblue);
+}
+
+.phone p,
+.location p,
+.email p {
+  padding-bottom: 0.5rem;
+  color: var(--lightblue);
+}
+
+.contact-details p {
+  padding-bottom: 0.5rem;
+  color: var(--lightblue);
+}
+
+.icons {
+  width: 1rem;
+  margin-right: 0.5em;
+}
+
+.copyright p {
+  margin-bottom: 2rem;
+}
+
+.copyright {
+  display: flex;
+  bottom: 2rem;
+  color: var(--lightblue);
+}
+
+/* Mobile Responsiveness */
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    display: none;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  .people,
+  .footer-container,
+  .copyright {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    margin-left: -8rem;
+  }
+
+  .contact-details {
+    margin-left: -5rem;
+  }
+
+  .location {
+    margin-left: -2rem;
+  }
+
+  .copyright p {
+    margin-left: -3.5rem;
+  }
+
+  .company h4,
+  .resources h4,
+  .legal h4,
+  .contact h4 {
+    margin-top: 1rem;
+  }
+}
