@@ -253,7 +253,7 @@ h2 span {
 
 .prev-btn,
 .next-btn {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
@@ -282,7 +282,6 @@ h2 span {
 
 
 /* FAQ Section Styling */
-
 .faq {
   max-width: 800px;
   margin: 0 auto;
@@ -304,6 +303,7 @@ h2 {
   margin: 10px;
   border-radius: 5px;
   overflow: hidden;
+  padding: 1rem;
 }
 
 .head {

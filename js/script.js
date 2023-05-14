@@ -51,21 +51,30 @@ nextBtn.addEventListener('click', nextTestimonial);
 prevBtn.addEventListener('click', prevTestimonial);
 
 
-const questions = document.querySelectorAll(".question");
+// const questions = document.querySelectorAll(".question");
 
-questions.forEach((question) => {
-  head.addEventListener("click", () => {
-    console.log('Clicked');
-    console.log('question.classList.contains("active"): ', question.classList.contains("active"));
-    const response = question.querySelector(".response");
-    console.log('response.style.display: ', response.style.display);
-    question.classList.toggle("active");
-    console.log('question.classList.contains("active"): ', question.classList.contains("active"));
-    if (question.classList.contains("active")) {
-      response.style.display = "block";
-    } else {
-      response.style.display = "none";
-    }
+// questions.forEach((question) => {
+//   head.addEventListener("click", () => {
+//     console.log('Clicked');
+//     console.log('question.classList.contains("active"): ', question.classList.contains("active"));
+//     const response = question.querySelector(".response");
+//     console.log('response.style.display: ', response.style.display);
+//     question.classList.toggle("active");
+//     console.log('question.classList.contains("active"): ', question.classList.contains("active"));
+//     if (question.classList.contains("active")) {
+//       response.style.display = "block";
+//     } else {
+//       response.style.display = "none";
+//     }
+//   });
+// });
+
+
+const accordionHeaders = document.querySelectorAll('.head');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', event => {
+    const parent = event.target.closest('.question');
+    parent.classList.toggle('active');
   });
 });
-
