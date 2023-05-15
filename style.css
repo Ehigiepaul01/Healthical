@@ -25,17 +25,25 @@ body {
 
 /* Navbar styling */
 nav {
-  position: relative;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3rem 0;
+  margin-left: 3rem;
 }
 
 .home {
@@ -44,11 +52,31 @@ nav {
   padding-right: 1.5rem;
 }
 
-.menu a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-right: 1.5rem;
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 1rem;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
   color: var(--blue);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  color: var(--gray);
 }
 
 .sign-up {
@@ -67,8 +95,17 @@ nav {
   border-radius: 0.3rem;
 }
 
-.mobile-menu {
+.hamburger-menu {
   display: none;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Hero Section Styling */
@@ -80,6 +117,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5rem;
   width: 100vw;
   height: 100vh;
 }
@@ -190,7 +228,6 @@ h2 span {
   margin-bottom: 20px;
 }
 
-
 /* Testimonial Section Styling */
 
 .testimonials h2 {
@@ -280,7 +317,6 @@ h2 span {
   right: 0;
 }
 
-
 /* FAQ Section Styling */
 .faq {
   max-width: 800px;
@@ -336,6 +372,10 @@ h2 {
   margin: 0;
 }
 
+.question.active .response {
+  display: block;
+}
+
 .faq h2 {
   text-align: center;
   justify-content: center;
@@ -347,7 +387,6 @@ h2 {
 .faq span {
   border-bottom: 2px solid var(--blue);
 }
-
 
 /* Footer Section Styling */
 .footer-area {
@@ -391,21 +430,27 @@ h2 {
   color: var(--lightblue);
 }
 
-.phone p,
-.location p,
-.email p {
-  padding-bottom: 0.5rem;
+.info {
+  position: relative;
+}
+
+.info li {
+ display: flex;
+  margin-bottom: 0.6rem;
+}
+
+.info li span:nth-child(1) {
+  font-size: 20px;
+  color: var(--lightblue);
+  margin-right: .5rem;
+}
+
+.info li span {
   color: var(--lightblue);
 }
 
-.contact-details p {
-  padding-bottom: 0.5rem;
+.info a {
   color: var(--lightblue);
-}
-
-.icons {
-  width: 1rem;
-  margin-right: 0.5em;
 }
 
 .copyright p {
@@ -478,10 +523,48 @@ h2 {
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  .nav-container {
+  .nav-list {
     display: none;
+    margin: auto;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   button {
@@ -503,8 +586,8 @@ h2 {
     margin-left: -5rem;
   }
 
-  .location {
-    margin-left: -2rem;
+  .info {
+    margin-left: 4rem;
   }
 
   .copyright p {

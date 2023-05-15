@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;500&family=Quicksand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: hsl(240, 100%, 27.3%);
+  --white: hsl(0, 0%, 100%);
+  --lightblue: hsl(195, 48%, 82%);
+  --blue: hsl(240, 96%, 46%);
+  --gray: hsl(0, 0%, 50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--white);
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  margin-left: 3rem;
+}
+
+.about {
+  border-bottom: 4px solid var(--blue);
+
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 1rem;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  color: var(--gray);
+}
+
+.sign-up {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--blue);
+  background: var(--white);
+  color: var(--blue);
+  margin-right: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.log-in {
+  padding: 0.5rem 2rem;
+  background: var(--darkblue);
+  color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hero Styling */
+.hero {
+    background-image: url('./images/image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 4rem;
+    width: 100vw;
+    height: 70vh;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+  }
+  
+  .hero-detail {
+    text-align: center;
+    justify-content: center;
+    margin: 4rem auto;
+    color: var(--white);
+  }
+  
+  .hero-detail h3 {
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    padding-right: 1.5rem;
+    display: inline-flex;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+  }
+  
+  .hero-container h3 a {
+    color: var(--white);
+  }
+  
+  .color {
+    color: var(--gray);
+  }
+  
+  .hero-detail p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  /* End of Hero Section Styling */
+
+  /* Vision and Mission Section Styling */
+.vision-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+  
+  .mission,
+  .vision {
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--blue);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--blue);
+  }
+  
+  /* End of Vision and Mission Section Styling */
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+    margin: auto;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .mission,
+  .vision {
+    width: 80%;
+    margin: auto;
+  }
+
+  .mission {
+    margin-bottom: 1.5rem;
+  }
+}

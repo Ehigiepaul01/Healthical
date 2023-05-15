@@ -1,11 +1,10 @@
-// const btn = document.getElementById("menu-btn");
-// const nav = document.getElementById("mobile-menu");
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navList = document.querySelector('.nav-list');
 
-// btn.addEventListener("click", () => {
-//   btn.classList.toggle("open");
-//   nav.classList.toggle("flex");
-//   nav.classList.toggle("hidden");
-// });
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  navList.classList.toggle('show');
+});
 
 const testimonials = document.querySelector('.test-container');
 const testimonialItems = document.querySelectorAll('.testimonial');
@@ -50,31 +49,17 @@ showTestimonial();
 nextBtn.addEventListener('click', nextTestimonial);
 prevBtn.addEventListener('click', prevTestimonial);
 
+const questions = document.querySelectorAll(".question");
 
-// const questions = document.querySelectorAll(".question");
-
-// questions.forEach((question) => {
-//   head.addEventListener("click", () => {
-//     console.log('Clicked');
-//     console.log('question.classList.contains("active"): ', question.classList.contains("active"));
-//     const response = question.querySelector(".response");
-//     console.log('response.style.display: ', response.style.display);
-//     question.classList.toggle("active");
-//     console.log('question.classList.contains("active"): ', question.classList.contains("active"));
-//     if (question.classList.contains("active")) {
-//       response.style.display = "block";
-//     } else {
-//       response.style.display = "none";
-//     }
-//   });
-// });
-
-
-const accordionHeaders = document.querySelectorAll('.head');
-
-accordionHeaders.forEach(header => {
-  header.addEventListener('click', event => {
-    const parent = event.target.closest('.question');
-    parent.classList.toggle('active');
+questions.forEach((question) => {
+  const head = question.querySelector(".head");
+  head.addEventListener("click", () => {
+    question.classList.toggle("active");
+    const response = question.querySelector(".response");
+    if (question.classList.contains("active")) {
+      response.style.display = "block";
+    } else {
+      response.style.display = "none";
+    }
   });
 });
