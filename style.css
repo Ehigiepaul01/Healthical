@@ -390,77 +390,77 @@ h2 {
 
 /* Footer Section Styling */
 .footer-area {
-  background: var(--darkblue);
-  padding-top: 1rem;
-  padding-left: 12rem;
+  background-color: var(--darkblue);
+  padding: 30px;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: row;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
-  padding-right: 2rem;
-  /* justify-content: space-between; */
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .company,
 .legal,
 .resources,
 .contact {
-  padding-right: 6rem;
+  flex-basis: 25%;
+  margin-bottom: 30px;
 }
 
 .company h4,
-.resources h4,
 .legal h4,
+.resources h4,
 .contact h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.company-details,
+.legal-details,
+.resources-details,
+.contact-details {
   display: flex;
-  padding-bottom: 1rem;
-  font-weight: bold;
-  color: var(--white);
+  flex-direction: column;
+  color: var(--lightblue);
 }
 
 .company-details p,
 .legal-details p,
 .resources-details p {
+  margin: 5px 0;
+}
+
+.company-details p a {
+  color: var(--lightblue);
+}
+
+.contact-details .info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-details .info li {
   display: flex;
-  padding-bottom: 0.5rem;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.contact-details .info li span {
+  margin-right: 10px;
+}
+
+.contact-details .info li a {
+  text-decoration: none;
   color: var(--lightblue);
 }
 
-.info {
-  position: relative;
+.contact-details .info li a:hover {
+  text-decoration: underline;
 }
 
-.info li {
- display: flex;
-  margin-bottom: 0.6rem;
-}
-
-.info li span:nth-child(1) {
-  font-size: 20px;
-  color: var(--lightblue);
-  margin-right: .5rem;
-}
-
-.info li span {
-  color: var(--lightblue);
-}
-
-.info a {
-  color: var(--lightblue);
-}
-
-.copyright p {
-  margin-bottom: 2rem;
-}
-
-.copyright {
-  display: flex;
-  bottom: 2rem;
-  color: var(--lightblue);
+.fa-solid {
+  color: var(--white);
 }
 
 /* Mobile Responsiveness */
@@ -469,11 +469,6 @@ h2 {
   .hero {
     flex-direction: column;
   }
-
-  /* .image-overlay {
-    max-width: 100%;
-    margin: 20px;
-  } */
 
   .details h1 {
     font-size: 2rem;
@@ -521,10 +516,21 @@ h2 {
   .question {
     width: calc(50% - 20px);
   }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .company,
+  .legal,
+  .resources,
+  .contact {
+    flex-basis: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .nav-list {
+  /* .nav-list {
     display: none;
     margin: auto;
     flex-direction: column;
@@ -547,9 +553,9 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: auto;
-  }
+  } */
 
-  .hamburger-menu {
+  /* .hamburger-menu {
     display: block;
     cursor: pointer;
     z-index: 100;
@@ -565,39 +571,14 @@ h2 {
 
   .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
+  } */
 
   button {
     margin-top: 1rem;
   }
 
-  .people,
-  .footer-container,
-  .copyright {
+  .people {
     display: flex;
     flex-direction: column;
-  }
-
-  .footer-container {
-    margin-left: -8rem;
-  }
-
-  .contact-details {
-    margin-left: -5rem;
-  }
-
-  .info {
-    margin-left: 4rem;
-  }
-
-  .copyright p {
-    margin-left: -3.5rem;
-  }
-
-  .company h4,
-  .resources h4,
-  .legal h4,
-  .contact h4 {
-    margin-top: 1rem;
   }
 }
