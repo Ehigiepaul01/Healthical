@@ -159,7 +159,18 @@ p {
   font-size: 0.9rem;
 }
 
+.arrow {
+  display: block;
+}
+
+
+
 /* MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+  .arrow {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .logo {

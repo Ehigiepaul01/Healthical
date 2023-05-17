@@ -305,6 +305,10 @@ header {
   .contact-details .info li span {
     margin-right: 10px;
   }
+
+  .fa-solid {
+    color: var(--white);
+  }
   
   .contact-details .info li a {
     text-decoration: none;
