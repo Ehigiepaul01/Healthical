@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;500&family=Quicksand&display=swap');
 
 * {
   margin: 0;
@@ -20,7 +20,7 @@ a {
 
 body {
   color: var(--white);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Navbar styling */
@@ -75,6 +75,7 @@ nav {
   text-decoration: none;
   color: var(--blue);
   font-weight: 500;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -390,7 +391,7 @@ h2 {
 }
 
 .faq span {
-  border-bottom: 2px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
 }
 
 /* Footer Section Styling */
@@ -582,7 +583,10 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-
+  .about-us h2 {
+    font-size: 30px;
+  }
+  
   .details h1 {
     font-size: 1.7rem;
   }

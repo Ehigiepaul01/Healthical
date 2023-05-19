@@ -24,17 +24,10 @@ body {
 }
 
 /* Navbar Styling */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
 header {
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  padding: 30px;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,22 +36,35 @@ header {
 }
 
 .nav-container {
-  margin-left: 3rem;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
 .career {
-  border-bottom: 4px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
 }
 
 .menu {
+  list-style: none;
   display: flex;
-  list-style-type: none;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
 .menu li {
-  margin-right: 1rem;
+  margin-right: 20px;
 }
 
 .menu li:last-child {
@@ -66,11 +72,11 @@ header {
 }
 
 .menu li a {
-  color: var(--blue);
   text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .menu li a:hover {
@@ -88,8 +94,8 @@ header {
 
 .log-in {
   padding: 0.5rem 2rem;
-  background: var(--darkblue);
-  color: var(--white);
+  border: 2px solid var(--blue);
+  background: var(--white);
   border-radius: 0.3rem;
 }
 
@@ -189,10 +195,10 @@ header {
 }
 
 .container p {
-    color: var(--blue);
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  color: var(--blue);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .colored-cards {
@@ -201,7 +207,8 @@ header {
   justify-content: center;
 }
 
-.card, .pink-card {
+.card,
+.pink-card {
   flex-basis: calc(50% - 40px); /* Updated value */
   margin: 5px;
   padding: 2rem;
@@ -218,7 +225,7 @@ header {
   align-items: center;
 }
 
-.pink{
+.pink {
   background-color: lightpink;
 }
 
@@ -251,46 +258,44 @@ header {
 
 /* Open Position Section Styling */
 .position {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    color: #000;
-    width: 80%;
-    margin: 5rem auto;
-    border-radius: .6rem;
-  }
-  
-  .open-position {
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #000;
+  width: 80%;
+  margin: 5rem auto;
+  border-radius: 0.6rem;
+}
 
-  .open-position h1 {
-    padding-top: 2rem;
-  }
-  
-  .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding: 20px;
+.open-position {
+  text-align: center;
+}
 
-  }
-  
-  .box img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .box p {
-    margin: 0;
-    font-size: 1.2rem;
-    padding-bottom: 3rem;
-  }
-  
+.open-position h1 {
+  padding-top: 2rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.box img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin: 0;
+  font-size: 1.2rem;
+  padding-bottom: 3rem;
+}
 
 /* Footer Section Styling */
 .footer-area {
@@ -368,6 +373,53 @@ header {
 }
 
 @media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    margin: auto;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .sign-up {
+    margin: 1rem 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .text-container h2 {
     font-size: 18px;
   }
