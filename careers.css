@@ -396,13 +396,13 @@ nav {
     display: flex;
     flex-direction: column;
     margin: auto;
-  }
+  } 
 
   .sign-up {
     margin: 1rem 0;
   }
 
-  .hamburger-menu {
+ .hamburger-menu {
     display: block;
     cursor: pointer;
     z-index: 100;
@@ -418,7 +418,8 @@ nav {
 
   .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
+  } 
+
 
   .text-container h2 {
     font-size: 18px;
