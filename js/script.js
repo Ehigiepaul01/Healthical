@@ -6,60 +6,23 @@ hamburgerMenu.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
 
-const testimonials = document.querySelector('.test-container');
-const testimonialItems = document.querySelectorAll('.testimonial');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+// let accordions = document.querySelectorAll('.accordion-wrapper .accordion');
+// accordions.forEach((acco) =>{
+//   acco.onclick = () =>{
+//     accordions.forEach((subcontent) =>{
+//       subcontent.classList.remove('active');
+//     })
+//     acco.classList.add(active);
+//   }
+// })
 
-let index = 0;
-const lastIndex = testimonialItems.length - 1;
+const accordions = document.querySelectorAll('.accordion');
 
-function showTestimonial() {
-  testimonialItems.forEach((testimonial) => {
-    testimonial.style.display = 'none';
-  });
+accordions.forEach(function(accordion) {
+  const heading = accordion.querySelector('.accordion-heading');
 
-  testimonialItems[index].style.display = 'flex';
-}
-
-function nextTestimonial() {
-  if (index === lastIndex) {
-    index = 0;
-  } else {
-    index++;
-  }
-
-  showTestimonial();
-}
-
-function prevTestimonial() {
-  if (index === 0) {
-    index = lastIndex;
-  } else {
-    index--;
-  }
-
-  showTestimonial();
-}
-
-// show first testimonial initially
-showTestimonial();
-
-// add event listeners to buttons
-nextBtn.addEventListener('click', nextTestimonial);
-prevBtn.addEventListener('click', prevTestimonial);
-
-const questions = document.querySelectorAll(".question");
-
-questions.forEach((question) => {
-  const head = question.querySelector(".head");
-  head.addEventListener("click", () => {
-    question.classList.toggle("active");
-    const response = question.querySelector(".response");
-    if (question.classList.contains("active")) {
-      response.style.display = "block";
-    } else {
-      response.style.display = "none";
-    }
+  heading.addEventListener('click', function() {
+    accordion.classList.toggle('active');
   });
 });
+

@@ -209,7 +209,7 @@ nav {
 
 .card,
 .pink-card {
-  flex-basis: calc(50% - 40px); /* Updated value */
+  flex-basis: calc(50% - 40px); 
   margin: 5px;
   padding: 2rem;
   background-color: lightblue;

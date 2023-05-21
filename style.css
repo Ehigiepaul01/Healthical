@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;500&family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;500&family=Quicksand&display=swap");
 
 * {
   margin: 0;
@@ -20,7 +20,7 @@ a {
 
 body {
   color: var(--white);
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Navbar styling */
@@ -245,15 +245,6 @@ h2 span {
   padding-bottom: 2.5rem;
 }
 
-/* .testimonial1,
-.testimonial2,
-.testimonial3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
- */
-
 .testimonials {
   text-align: center;
   padding: 50px 0;
@@ -324,74 +315,54 @@ h2 span {
 }
 
 /* FAQ Section Styling */
-.faq {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2rem;
+.accordion-container {
+  max-width: 700px;
+  margin: 40px auto;
 }
 
 .accordion {
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
-.question {
-  background-color: var(--lightblue);
-  margin: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 1rem;
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: var(--blue);
 }
 
-.head {
+.accordion-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f5f5f5;
+  color: var(--blue);
   padding: 10px;
   cursor: pointer;
 }
 
-.head h3 {
-  margin: 0;
-  font-size: 1.2rem;
+.accordion.active .accordion-heading i {
+  transform: rotate(180deg);
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.response {
-  padding: 10px;
+.accordion-content {
   display: none;
+  padding: 10px;
+  color: var(--blue);
+  animation: animate 0.2s linear backwards;
+  transform-origin: top;
 }
 
-.response p {
-  margin: 0;
-}
-
-.question.active .response {
+.accordion.active .accordion-content {
   display: block;
 }
 
-.faq h2 {
-  text-align: center;
-  justify-content: center;
-  color: var(--blue);
-  padding-bottom: 2rem;
-  font-size: 1.5rem;
-}
-
-.faq span {
-  border-bottom: 3px solid var(--blue);
+@keyframes animate {
+  0% {
+    transform: scale(0);
+  }
 }
 
 /* Footer Section Styling */
@@ -495,13 +466,13 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: auto;
-  } 
+  }
 
   .sign-up {
     margin: 1rem 0;
   }
 
- .hamburger-menu {
+  .hamburger-menu {
     display: block;
     cursor: pointer;
     z-index: 100;
@@ -517,7 +488,7 @@ h2 {
 
   .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  } 
+  }
 
   .hero {
     flex-direction: column;
@@ -586,7 +557,7 @@ h2 {
   .about-us h2 {
     font-size: 30px;
   }
-  
+
   .details h1 {
     font-size: 1.7rem;
   }
@@ -598,5 +569,9 @@ h2 {
   .people {
     display: flex;
     flex-direction: column;
+  }
+
+  .accordion-container {
+    width: 80%;
   }
 }
