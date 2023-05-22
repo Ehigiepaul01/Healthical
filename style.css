@@ -350,7 +350,7 @@ h2 span {
 .accordion-content {
   display: none;
   padding: 10px;
-  color: var(--blue);
+  color: #000;
   animation: animate 0.2s linear backwards;
   transform-origin: top;
 }
