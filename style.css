@@ -286,34 +286,6 @@ h2 span {
   color: var(--lightblue);
 }
 
-.prev-btn,
-.next-btn {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border: none;
-  outline: none;
-  background-color: #fff;
-  color: #555;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: #f2f2f2;
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
-}
-
 /* FAQ Section Styling */
 .accordion-container {
   max-width: 700px;
@@ -331,6 +303,10 @@ h2 span {
   padding: 20px;
   margin-bottom: 20px;
   color: var(--blue);
+}
+
+.heading span {
+  border-bottom: 3px solid var(--blue);
 }
 
 .accordion-heading {
