@@ -162,6 +162,10 @@ p {
   font-size: 0.9rem;
 }
 
+.arrow {
+  display: none;
+}
+
 /* Media Query */
 @media screen and (max-width: 1024px) {
   .logo {

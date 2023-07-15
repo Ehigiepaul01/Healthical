@@ -159,6 +159,10 @@ span {
   color: var(--blue);
 }
 
+.arrow {
+  display: none;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
