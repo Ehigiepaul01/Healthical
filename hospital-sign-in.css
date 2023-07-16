@@ -54,7 +54,7 @@ body {
 
 .avatar {
   margin-top: 0.4rem;
-  height: 100vh;
+  height: 70vh;
   width: 50vw;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--blue);
   text-align: center;
   margin-bottom: 2rem;
@@ -85,7 +85,7 @@ h3 {
 
 .patient {
   background: transparent;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 2rem;
   padding: 1rem 2rem;
   border: none;
@@ -100,7 +100,7 @@ h3 {
 .hospital {
   background: var(--blue);
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 2rem;
   padding: 1rem 2.5rem;
   border: none;
